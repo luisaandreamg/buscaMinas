@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.minesweeper{
+  width: 500px;
+  height: 600px;
+  border:1px solid white;
+  background-color: #ffb300;
+}
+.board{
+  width: 499px; /*ok*/
+  height: 499px; /*ok*/
+  border: 1px solid white ; /*ok*/
+  border-bottom: none; /*ok*/
+}
+.board .row{
+  display: flex; /*ok*/
+  height: 50px; /*ok*/
+}
+.board .row:last-child{
+  border-bottom: none; /*ok*/
+  height: 50px; /*ok*/
+}
+.board .row .cell{
+  border-right: 1px solid white;
+  width: 49px; /*ok*/
+  display: flex; /*ok*/
+  justify-content: center; /*ok*/
+  align-items: center; /*ok*/
+  border-bottom: 1px solid white; /*ok*/
+}
+.board .row .cell.open{
+  background-color: #ffcc5c;/*ok*/
+}
+.board .row .cell.open:hover{
+  background-color: #ffcc5c;/*ok*/
+}
+.board .row .cell:hover{
+  background-color: #F2D66B;/*ok*/
+}
+.board .row .cell:last-child{
+  border-right: none;/*ok*/
+}
+.board-head{
+  display: flex; /*ok*/
+  flex-direction: row; /*ok*/
+  height:55px; /*ok*/
+  justify-content: space-between; /*ok*/
+  align-items: center; /*ok*/
+  border-left: 1px solid white; /*ok*/
+  border-right: 1px solid white; /*ok*/
+}
+.board-head .reset, .board-head .flag-count, .board-head .timer{
+  width: 55px; /*ok*/
+  height: 35px; /*ok*/
+  display: flex; /*ok*/
+  justify-content: center; /*ok*/
+}
+/*.board-head .reset{
+  /*font-size: 25px;
+}*/
+
+*{
+  margin: 0; /*ok*/
+  padding: 0; /*ok*/
+}
+html, body{
+  height: 100%; /*ok*/
+}
+html #root, body #root{
+  height: 100%; /*ok*/
+  display: flex; /*ok*/
+  justify-content: center; /*ok*/
+  align-items: center; /*ok*/
+}
+html #root .minesweeper, body #root .minesweeper{
+  display: flex; /*ok*/
+  flex-direction:column; /*ok*/
+  height: 592px; /*ok*/
+}
+html #root .minesweeper h1, body #root .minesweeper h1{
+  text-align: center; /*ok*/
+  color: white; /*ok*/
+  letter-spacing: 10px; /*ok*/
+  border-left: 1px solid white; /*ok*/
+  border-top: 1px solid white; /*ok*/
+  border-right: 1px solid white; /*ok*/
+}
